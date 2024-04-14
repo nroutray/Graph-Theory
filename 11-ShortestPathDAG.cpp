@@ -54,10 +54,7 @@ class Solution {
       //Further, we declare a vector ‘dist’ in which we update the value of the nodes’
       //distance from the source vertex after relaxation of a particular node.
 
-      vector < int > dist(N);
-      for (int i = 0; i < N; i++) {
-        dist[i] = 1e9;
-      }
+      vector < int > dist(N,1e9);
 
       dist[0] = 0;
       while (!st.empty()) {

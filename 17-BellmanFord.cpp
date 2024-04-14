@@ -1,6 +1,6 @@
 //only in DG, edges can be in any order
 //works in detecting -ve cycles as well; pathWt<0
-//relax all edges sequentially n-1 times (dist[it]+wt < dist[u] : if it!=infinity)
+//relax all edges sequentially n-1 times (dist[it]+wt < dist[u] : if it!=infinity). At most n-1 edges, if > n-1 -> then cycle and we can discard that cyclic part if no -ve cycle. 
 //n-1 bcz in first iteration u find min for nodes[0], then using that u do others and so on....
 //if we relax on Nth ieration, and dist[] reduces then there is an -ve cycle
 

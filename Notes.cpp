@@ -20,6 +20,12 @@ Range Min Query
 
 3. No. of islands = no. of connected components 
 4. vector<pair<int,int>>dir={{1,0},{0,1},{-1,0},{0,-1}};
+
+bool check(int r,int c){ 
+    if(r>=0 and r<m and c>=0 and c<n) return true;
+    return false;
+}
+
 5. Do bfs when you have multiple starting points and need to visit different nodes simultaneously, with minimum cost. //rottingOranges
 6. Cycle in undirected graph bfs/dfs -> traverse by (node,parent) -> if a node from the adjacency list is visited, 
 and you are moving in a particular direction, then that node must be the parent but if parent!=adjacentNode, 
