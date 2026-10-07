@@ -60,3 +60,41 @@ int main() {
 	return 0;
 }
  
+//Length of cycle:
+
+// class Solution {
+// public:
+//     int ans = -1;
+
+//     void dfs(int node, vector<int>& edges, vector<int>& vis, vector<int>& pathVis, unordered_map<int, int>& order, int depth) {
+//         vis[node] = 1;
+//         pathVis[node] = 1;
+//         order[node] = depth;
+
+//         int next = edges[node];
+//         if (next != -1) {
+//             if (!vis[next]) {
+//                 dfs(next, edges, vis, pathVis, order, depth + 1);
+//             } else if (pathVis[next]) {
+//                 // Found a cycle: depth - order[next] + 1
+//                 ans = max(ans, depth - order[next] + 1);
+//             }
+//         }
+
+//         pathVis[node] = 0; // backtrack
+//     }
+
+//     int longestCycle(vector<int>& edges) {
+//         int n = edges.size();
+//         vector<int> vis(n, 0);
+//         vector<int> pathVis(n, 0); 
+//         for (int i = 0; i < n; ++i) {
+//             if (!vis[i]) {
+//                 unordered_map<int, int> order; // local discovery order
+//                 dfs(i, edges, vis, pathVis, order, 0);
+//             }
+//         }
+
+//         return ans;
+//     }
+// };
